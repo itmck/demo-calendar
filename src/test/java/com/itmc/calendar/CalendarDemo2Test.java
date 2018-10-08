@@ -2,7 +2,7 @@ package com.itmc.calendar;
 
 import org.junit.Test;
 
-import java.util.Calendar;
+import java.util.*;
 
 /**
  * Create by it_mck 2018/10/8 10:43
@@ -94,6 +94,17 @@ public class CalendarDemo2Test {
         } else {
             System.out.println(year+"是闰年,他的2月:" + date + "天");
         }
+    }
+    @Test
+    public void run5() {
 
+        GregorianCalendar c =
+                (GregorianCalendar) GregorianCalendar.getInstance();
+        int year = 2001;
+        if (c.isLeapYear(year)) {
+            System.out.println(year+"是闰年");
+        } else {
+            System.out.println(year+"是平年");
+        }
     }
 }
